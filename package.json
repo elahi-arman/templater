@@ -1,0 +1,9 @@
+{
+  "name": "mini-puppet",
+  "version": "0.0.1",
+  "description": "A mini version of puppet",
+  "main": "index.js",
+  "author": "Arman Elahi <npm@elahi-arman.me>",
+  "license": "MIT",
+  "private": true
+}
