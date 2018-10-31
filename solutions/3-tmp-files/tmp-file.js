@@ -27,7 +27,7 @@ function createTempDirectory(parent_directory){
   const exists = fs.existsSync(directory_path);
 
   if (!exists){
-    console.log(`Created new temp directory ${temp_root}`);
+    console.log(`Created new temp directory ${parent_directory}`);
     fs.mkdirSync(directory_path);
   } else {
     const fd = fs.openSync(directory_path, 'r');
@@ -55,7 +55,7 @@ function createTempDirectory(parent_directory){
  */
 
 function generateNFiles(num_files, parent_directory){
-  for (let i = 0; i < FILE_COUNT; i++){
+  for (let i = 0; i < num_files; i++){
     const file_path = path.join(parent_directory, `${i}.txt`);
     console.log(`Created file ${file_path}`);
     fs.writeFileSync(file_path, i);

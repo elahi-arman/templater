@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "Arman Elahi <npm@elahi-arman.me>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }
