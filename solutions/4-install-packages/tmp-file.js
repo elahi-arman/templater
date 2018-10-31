@@ -2,7 +2,7 @@
 const fs = require('fs');         // handles file system related stuff
 const path = require('path');     // handles path utilities
 
-const generators = require('./generate-contents');
+const generate_files = require('./generate-files');
 
 const DEPTH_MULTIPLIER = 1;
 const ROOT_DIR = process.cwd();
@@ -67,21 +67,8 @@ function printDirectoryListing(directory, depth = 1){
 
 function main(){
   const temp_root = createTempDirectory(ROOT_DIR);
-  const users = []
-  const transactions = [];
-
-  for (let i = 0; i < 100; i++){
-    users.push(generators.generate_user());
-  }
-
-  const user_ids = users.map(user => user[0]);
-
-  for (let i = 0; i < 500; i++){
-    users.push(generators.generate_transactions(user_ids));
-  }
-
-  fs.writeFileSync(path.join(temp_root, 'users.csv'), users.join('\n'))
-  fs.writeFileSync(path.join(temp_root, 'transactions.csv'), transactions.join('\n'))
+ 
+  generate_files(temp_root);
  
   console.log(`Temp directory structure`);
 
