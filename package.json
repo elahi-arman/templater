@@ -1,12 +1,20 @@
 {
-  "name": "mini-puppet",
+  "name": "templater",
   "version": "0.0.1",
-  "description": "A mini version of puppet",
+  "description": "A program that can create template directory structures",
   "main": "index.js",
   "author": "Arman Elahi <npm@elahi-arman.me>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "faker": "^4.1.0"
+    "chalk": "^2.4.1",
+    "faker": "^4.1.0",
+    "yargs": "^12.0.2"
+  },
+  "scripts": {
+    "lint": "eslint --config .eslintrc.yaml code"
+  },
+  "devDependencies": {
+    "eslint": "4"
   }
 }

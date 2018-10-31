@@ -3,6 +3,23 @@ const path = require('path');
 
 const faker = require('faker');
 
+/**
+ * @typedef User
+ * @param {string} user_id
+ * @param {string} first_name
+ * @param {string} last_name
+ * @param {string} title
+ * @param {string} phone
+ *
+ */
+
+/**
+ * @exports
+ * @function user
+ * @description generates a user object
+ *
+ * @returns {User}
+ */
 const user = () => {
   const first_name = faker.name.firstName();
   const last_name = faker.name.lastName();
@@ -17,6 +34,21 @@ const user = () => {
   }
 }
 
+/**
+ * @typedef Transaction
+ * @param {string} user_id
+ * @param {string} type
+ * @param {string} amount
+ *
+ */
+
+/**
+ * @exports
+ * @function transaction
+ * @description generates a transaction object
+ *
+ * @returns {Transaction}
+ */
 const transaction = (user_ids) => {
   return {
     user_id: faker.random.arrayElement(user_ids),

@@ -8,7 +8,7 @@ So lets create a solutions directory where all our code is kept. For this excerc
 
 To invoke most node programs, we'll run the command ```node <file_name>```. Go ahead and run ```node solutions/tmp-file.js```. You should see the program flow print through the screen, but nothing happened just yet.
 
-If you open ```solutions/tmp-file.js``` you'll see that it has a couple of functions, starting with a main and then some stuff for you to fill in. Node execution happens primarily from top to bottom. I like to have a main function and just invoke it. Anything at the top level scope of a node file will be automatically invoked regardless of whether or not this is the root process.
+If you open ```solutions/tmp-file.js``` you'll see that it has a couple of functions, starting with a main and then some stuff for you to fill in. Node execution happens primarily from top to bottom. I like to have a main function and just invoke it. Anything at the top level scope of a node file will be automatically invoked regardless of whether or not this is the root process. 
 
 Note that we don't create something in /tmp yet, we're just creating something in our local directory.
 
@@ -27,7 +27,11 @@ Fill in the following functions only using ** Sync ** methods
 
 ## Extras
 
-* Between runs of the script, you have to remove the created folder. Put in a check to not create the temp directory if the directory already exists.
+* Between runs of the script, you have to remove the created folder. Put in a check to not create the temp directory if the directory already exists. 
 * Create a subdirectory inside the newly created temp directory. Print a file structure that looks like the following:
 * Create directories inside of /tmp instead of using the current directory.
 
+```
+
+
+```

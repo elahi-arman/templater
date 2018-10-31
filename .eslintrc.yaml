@@ -1,0 +1,16 @@
+# https://eslint.org/docs/user-guide/configuring
+---
+parserOptions:
+  ecmaVersion: 2018
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+
+env:
+  es6: true
+  node: true
+
+extends:
+  - "eslint:recommended"
+
+rules:
+  no-console: 0

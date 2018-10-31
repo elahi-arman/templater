@@ -1,12 +1,9 @@
 // we import modules from the standard library here
-const fs = require('fs');         // handles file system related stuff
-const path = require('path');     // handles path utilities
 
-const generate_files = require('./generate-files');
+// import/require the generate-files module here
 
 const DEPTH_MULTIPLIER = 1;
 const ROOT_DIR = process.cwd();
-const FILE_COUNT = 10;
 
 const file_tree = {
   lastFile: '└── ',
@@ -17,7 +14,7 @@ const file_tree = {
 
 /**
  * @function createTempDirectory
- * 
+ *
  * @param {String} parent_directory - the directory under which we'll create a new tmp directory
  *
  * @returns {String} the newly created directory path
@@ -33,7 +30,7 @@ function createTempDirectory(parent_directory){
   } else {
     const fd = fs.openSync(directory_path, 'r');
     const stats = fs.fstatSync(fd);
-    
+
     if (stats.isFile()){
       console.error(`${directory_path} already exists and is a file. Remove it to continue`);
       process.exit(1);
@@ -58,7 +55,7 @@ function printDirectoryListing(directory, depth = 1){
   const directory_contents = fs.readdirSync(directory);
   console.log(path.basename(directory));
   for (let i = 0; i < directory_contents.length - 1; i++){
-    console.log(`${prefix}${file_tree.file}${directory_contents[i]}`); 
+    console.log(`${prefix}${file_tree.file}${directory_contents[i]}`);
   }
 
   const last_file = directory_contents[directory_contents.length - 1]
@@ -66,11 +63,10 @@ function printDirectoryListing(directory, depth = 1){
 }
 
 function main(){
+
   const temp_root = createTempDirectory(ROOT_DIR);
- 
-  generate_files(temp_root);
- 
-  console.log(`Temp directory structure`);
+
+  // call generate file in here
 
   printDirectoryListing(temp_root);
 }

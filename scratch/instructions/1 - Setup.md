@@ -12,7 +12,7 @@
 
 #### Initial Project Setup
 
-1. git clone
+1. git clone mini-puppet
 1. yarn init
   1. name: <PRESS ENTER>
   1. version: 0.0.1
