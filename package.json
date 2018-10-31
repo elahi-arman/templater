@@ -1,9 +1,12 @@
 {
   "name": "templater",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A program that can create template directory structures",
   "main": "index.js",
   "author": "Arman Elahi <npm@elahi-arman.me>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }
