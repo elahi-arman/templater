@@ -36,8 +36,7 @@ function main() {
         csv: !parsedArguments['nocsv']
     }
     const directory = createDirectory(parsedArguments.path);
-    generate_files(directory, includedTypes);
-    printDirectoryListing(directory);
+    generate_files(directory, includedTypes).then(printDirectoryListing(directory)).catch(err => console.error(err));
 }
 
 main();

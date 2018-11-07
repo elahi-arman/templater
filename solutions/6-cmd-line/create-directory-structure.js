@@ -1,6 +1,5 @@
-// we import modules from the standard library here
-const fs = require('fs');         // handles file system related stuff
-const path = require('path');     // handles path utilities
+const fs = require('fs');         
+const path = require('path');     
 
 const generate_files = require('./generate-files');
 
