@@ -1,8 +1,11 @@
-// we import modules from the standard library here
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs');         
+const path = require('path');     
+
+const generate_files = require('./generate-files');
 
 const DEPTH_MULTIPLIER = 1;
+const ROOT_DIR = process.cwd();
+const FILE_COUNT = 10;
 
 const file_tree = {
   lastFile: '└── ',

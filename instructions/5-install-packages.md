@@ -44,7 +44,7 @@ from a directory with a package.json in order to install all dependencies into a
 
 We've already imported or required standard library packages. Importing 3rd party packages is done in the exact same way.
 
-```
+``` js
 const fs = require('fs');       // standard library
 const chalk = require('chalk'); // 3rd party
 ```
